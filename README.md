@@ -1,7 +1,7 @@
 # Minimal code to show parse_trans compilation problem
 
-Check out the repo and run `make` with Erlang R16B03. Here is the output from my machine
-(Ubuntu 12.10 with ESL erlang package installed):
+Check out the repo and run `make` with Erlang R16B03. Here is sample output from my machines
+(Ubuntu 12.10 with and OSX 10.9, both with R16B03 ESL erlang packages installed):
 
     $ erl -version
     Erlang (ASYNC_THREADS) (BEAM) emulator version 5.10.4
@@ -43,3 +43,6 @@ Check out the repo and run `make` with Erlang R16B03. Here is the output from my
                            [{file,"erl_lint.erl"},{line,1296}]}]}
     ERROR: compile failed while processing /home/martin/src/parse_trans_problem/deps/parse_trans: rebar_abort
     make: *** [compile] Error 1
+
+BTW, removing `parse_trans/src/exprecs.erl` makes the compilation pass, so only
+this specific module seems to cause trouble.

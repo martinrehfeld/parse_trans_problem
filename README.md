@@ -46,3 +46,6 @@ Check out the repo and run `make` with Erlang R16B03. Here is sample output from
 
 BTW, removing `parse_trans/src/exprecs.erl` makes the compilation pass, so only
 this specific module seems to cause trouble.
+
+**Update**: The issue was fixed with commit 763462825e4 on Dec 19, 2013.
+See https://github.com/uwiger/parse_trans/issues/10
